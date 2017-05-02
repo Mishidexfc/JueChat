@@ -1,0 +1,38 @@
+{
+    "code": 0,
+    "numberOfMessage":4,
+    "data": [
+             {
+             "avatar_url":"Avatar3",
+             "userID":"",
+             "nickname":"薛之谦",
+             "msgType":"image",
+             "msgContent":"xuezhiqian01",
+             "ctime": "Mar.22.2017 10:00"
+             },
+             {
+             "avatar_url":"Avatar3",
+             "userID":"",
+             "nickname":"薛之谦",
+             "msgType":"voice",
+             "msgContent":"演员",
+             "ctime": "Mar.22.2017 10:00"
+             },
+             {
+             "avatar_url":"Avatar3",
+             "userID":"",
+             "nickname":"薛之谦",
+             "msgType":"text",
+             "msgContent":"我的心愿是，世界和平",
+             "ctime": "Mar.22.2017 10:00"
+             },
+             {
+             "avatar_url":"Avatar1",
+             "userID":"",
+             "nickname":"王珏",
+             "msgType":"voice",
+             "msgContent":"演员",
+             "ctime": "Mar.22.2017 10:00"
+             }
+             ]
+}

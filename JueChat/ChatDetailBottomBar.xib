@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatDetailBottomBar" customModule="JueChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwG-Sn-BB9" userLabel="VoiceButton">
+                    <rect key="frame" x="5" y="7" width="35" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="tRW-PC-3hs"/>
+                    </constraints>
+                    <state key="normal" image="tool_voice_1"/>
+                    <connections>
+                        <action selector="SwitchInput:" destination="iN0-l3-epB" eventType="touchUpInside" id="rYw-Td-CaP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9h-pN-gaf" userLabel="MoreFeatureButton">
+                    <rect key="frame" x="280" y="7" width="35" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="8YG-s9-NSl"/>
+                    </constraints>
+                    <state key="normal" image="tool_share_1"/>
+                    <connections>
+                        <action selector="TapPlusButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="YBp-qu-jqx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBy-07-FVi" userLabel="EmojiButton">
+                    <rect key="frame" x="240" y="7" width="35" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="Q1h-LT-P4I"/>
+                    </constraints>
+                    <state key="normal" image="tool_emotion_1"/>
+                    <connections>
+                        <action selector="TapEmojiBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kn1-4u-jao"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-FO-hbe">
+                    <rect key="frame" x="45" y="10" width="190" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOY-LA-mat">
+                    <rect key="frame" x="45" y="10" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Hold to speak">
+                        <color key="titleColor" red="0.28149433736224416" green="0.27348795314644814" blue="0.29169971446700504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jBy-07-FVi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="5v3-zZ-ZNu"/>
+                <constraint firstItem="J9h-pN-gaf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="7ld-C9-hob"/>
+                <constraint firstItem="mwG-Sn-BB9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="BjI-f0-1RW"/>
+                <constraint firstItem="mwG-Sn-BB9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="EK5-cB-5ih"/>
+                <constraint firstItem="jBy-07-FVi" firstAttribute="leading" secondItem="QOY-LA-mat" secondAttribute="trailing" constant="5" id="F03-AP-myP"/>
+                <constraint firstAttribute="bottom" secondItem="QOY-LA-mat" secondAttribute="bottom" constant="10" id="I0d-aO-0Rq"/>
+                <constraint firstItem="QOY-LA-mat" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="MUU-7k-jIb"/>
+                <constraint firstItem="0Yz-FO-hbe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Om0-RT-C1o"/>
+                <constraint firstItem="J9h-pN-gaf" firstAttribute="leading" secondItem="jBy-07-FVi" secondAttribute="trailing" constant="5" id="SOw-hs-Pfm"/>
+                <constraint firstAttribute="trailing" secondItem="J9h-pN-gaf" secondAttribute="trailing" constant="5" id="Wka-NE-HEf"/>
+                <constraint firstItem="0Yz-FO-hbe" firstAttribute="leading" secondItem="mwG-Sn-BB9" secondAttribute="trailing" constant="5" id="Y70-jU-CQi"/>
+                <constraint firstAttribute="bottom" secondItem="mwG-Sn-BB9" secondAttribute="bottom" constant="7" id="cZO-Ol-GCs"/>
+                <constraint firstAttribute="bottom" secondItem="jBy-07-FVi" secondAttribute="bottom" constant="7" id="ikn-2W-PS2"/>
+                <constraint firstItem="jBy-07-FVi" firstAttribute="leading" secondItem="0Yz-FO-hbe" secondAttribute="trailing" constant="5" id="lUC-so-5xe"/>
+                <constraint firstItem="QOY-LA-mat" firstAttribute="leading" secondItem="mwG-Sn-BB9" secondAttribute="trailing" constant="5" id="nNx-V2-fAi"/>
+                <constraint firstAttribute="bottom" secondItem="J9h-pN-gaf" secondAttribute="bottom" constant="7" id="nod-uV-4eb"/>
+                <constraint firstAttribute="bottom" secondItem="0Yz-FO-hbe" secondAttribute="bottom" constant="10" id="vzr-MO-hWV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="EmojiButton" destination="jBy-07-FVi" id="Hlp-XO-USV"/>
+                <outlet property="InputTextField" destination="0Yz-FO-hbe" id="al2-wd-nDl"/>
+                <outlet property="MoreFeatureButton" destination="J9h-pN-gaf" id="zxX-Iq-L8y"/>
+                <outlet property="VoiceRecordButton" destination="QOY-LA-mat" id="sJb-nu-1kq"/>
+                <outlet property="VoiceSwitchButton" destination="mwG-Sn-BB9" id="EYU-BO-nvP"/>
+            </connections>
+            <point key="canvasLocation" x="83" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tool_emotion_1" width="35" height="35"/>
+        <image name="tool_share_1" width="35" height="35"/>
+        <image name="tool_voice_1" width="35" height="35"/>
+    </resources>
+</document>

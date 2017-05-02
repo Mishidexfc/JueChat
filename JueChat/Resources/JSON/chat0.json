@@ -1,0 +1,22 @@
+{
+    "code": 0,
+    "numberOfMessage":2,
+    "data": [
+             {
+             "avatar_url":"Avatar1",
+             "userID":"",
+             "nickname":"JueWang",
+             "msgType":"text",
+             "msgContent":"I am honored to be with you today at your commencement from one of the finest universities in the world. ",
+             "ctime": "Mar.22.2017 10:00"
+             },
+             {
+             "avatar_url":"Avatar1",
+             "userID":"",
+             "nickname":"JueWang",
+             "msgType":"text",
+             "msgContent":"Welcome to use JueChat!",
+             "ctime": "Mar.22.2017 10:00"
+             }
+             ]
+}

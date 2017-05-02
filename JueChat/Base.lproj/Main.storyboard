@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZWW-Nx-ZYN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChatView-->
+        <scene sceneID="U7S-ws-Fco">
+            <objects>
+                <viewController storyboardIdentifier="ChatView" id="P0j-HY-nch" userLabel="ChatView" customClass="ChatViewController" customModule="JueChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7fe-KM-eII"/>
+                        <viewControllerLayoutGuide type="bottom" id="swO-Wd-EUc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZFq-6o-sas">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="DBh-AX-Bv8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="roK-vg-aJZ"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DBh-AX-Bv8" firstAttribute="top" secondItem="7fe-KM-eII" secondAttribute="bottom" id="4ut-qn-d0A"/>
+                            <constraint firstItem="DBh-AX-Bv8" firstAttribute="leading" secondItem="ZFq-6o-sas" secondAttribute="leading" id="e3z-V0-jed"/>
+                            <constraint firstAttribute="trailing" secondItem="DBh-AX-Bv8" secondAttribute="trailing" id="f3z-Q6-hOT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="JueChat" id="8by-xQ-CYd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="92I-nc-4nb">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="tapUpperRightButton:" destination="P0j-HY-nch" id="hRN-A1-Jvv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEH-u1-Kn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190" y="-350"/>
+        </scene>
+        <!--My Tab Bar Controller-->
+        <scene sceneID="vkq-CB-vqT">
+            <objects>
+                <tabBarController id="ZWW-Nx-ZYN" customClass="myTabBarController" customModule="JueChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="fill" id="MKq-yb-KE6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="TabBarMain" destination="MKq-yb-KE6" id="5Rg-YA-NVk"/>
+                        <segue destination="Fsx-sz-kyc" kind="relationship" relationship="viewControllers" id="kTr-IO-z3T"/>
+                        <segue destination="Nxf-jR-faG" kind="relationship" relationship="viewControllers" id="gkX-cT-eX2"/>
+                        <segue destination="Wd6-nk-f9t" kind="relationship" relationship="viewControllers" id="boa-2P-J5M"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xv-eI-lPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-508" y="2"/>
+        </scene>
+        <!--ToolView-->
+        <scene sceneID="MzB-Tb-wZ7">
+            <objects>
+                <viewController storyboardIdentifier="ToolsView" id="OWT-9s-a9E" userLabel="ToolView" customClass="ToolsViewController" customModule="JueChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fzc-nw-bb4"/>
+                        <viewControllerLayoutGuide type="bottom" id="GUV-HG-rDj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gby-4G-VMa">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tools" id="MFb-wp-RLa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZR-E7-VkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2319.1999999999998" y="413.3433283358321"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="KvC-8f-ckk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fsx-sz-kyc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="contacts_add_newmessage" id="Vzw-69-kb1"/>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="I1S-4E-22b" userLabel="NaviBar">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P0j-HY-nch" kind="relationship" relationship="rootViewController" id="JGB-jP-d9n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIW-hA-4WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296.80000000000001" y="-350.37481259370315"/>
+        </scene>
+        <!--MeView-->
+        <scene sceneID="JMb-ga-7zg">
+            <objects>
+                <viewController storyboardIdentifier="MeView" id="ylA-Sx-gSR" userLabel="MeView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NDn-LC-acM"/>
+                        <viewControllerLayoutGuide type="bottom" id="s1K-Rw-Yq1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sw5-l6-X54">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Me" id="Pyx-9X-ZN2"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ner-yW-fHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608.79999999999995" y="860.41979010494754"/>
+        </scene>
+        <!--Tools-->
+        <scene sceneID="iu3-xF-OWv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nxf-jR-faG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tools" image="contacts_add_favourite" id="oTh-u3-xbP"/>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="VHG-qH-gnc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OWT-9s-a9E" kind="relationship" relationship="rootViewController" id="NpF-o6-RbM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaL-nU-MVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="413.3433283358321"/>
+        </scene>
+        <!--Me-->
+        <scene sceneID="lt5-Ft-PTb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wd6-nk-f9t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Me" image="tabbar_contactsHL" id="rLd-MI-zbM"/>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Wgq-5R-4F6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ylA-Sx-gSR" kind="relationship" relationship="rootViewController" id="Gc0-0b-aQC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIs-OP-CXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330.39999999999998" y="860.41979010494754"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="contacts_add_favourite" width="28" height="30"/>
+        <image name="contacts_add_newmessage" width="30" height="30"/>
+        <image name="tabbar_contactsHL" width="27" height="23"/>
+    </resources>
+</document>

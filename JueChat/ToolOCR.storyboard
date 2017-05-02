@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ToolOCR View Controller-->
+        <scene sceneID="yzg-CT-3LQ">
+            <objects>
+                <viewController storyboardIdentifier="ToolOCRmain" id="2Kf-bB-dnG" customClass="ToolOCRViewController" customModule="JueChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GRw-gU-57A"/>
+                        <viewControllerLayoutGuide type="bottom" id="zT6-vE-D9Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z1g-as-yCz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="orD-i6-CHe">
+                                <rect key="frame" x="26" y="617" width="323" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTg-VR-v5H">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="30"/>
+                                        <state key="normal" title="Photo"/>
+                                        <connections>
+                                            <action selector="SelectPhoto:" destination="2Kf-bB-dnG" eventType="touchUpInside" id="1jM-DV-kdM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuZ-NO-Kp6">
+                                        <rect key="frame" x="107.5" y="0.0" width="108" height="30"/>
+                                        <state key="normal" title="Copy"/>
+                                        <connections>
+                                            <action selector="CopyTokens:" destination="2Kf-bB-dnG" eventType="touchUpInside" id="OG0-Ku-cqg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gN-gO-7G7">
+                                        <rect key="frame" x="215.5" y="0.0" width="107.5" height="30"/>
+                                        <state key="normal" title="Select All"/>
+                                        <connections>
+                                            <action selector="SelectAll:" destination="2Kf-bB-dnG" eventType="touchUpInside" id="ESd-wd-DTj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C9a-i5-ogh"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ERe-QD-ewG">
+                                <rect key="frame" x="8" y="28" width="359" height="581"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="zDM-nH-MYU">
+                                    <size key="itemSize" width="70" height="25"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OcrCell" id="Uzn-3B-ABk" customClass="ToolOCRCellController" customModule="JueChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TTTTTTTTTTTT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezn-P6-45J">
+                                                    <rect key="frame" x="0.0" y="2" width="70" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="customSize" width="70" height="25"/>
+                                        <connections>
+                                            <outlet property="wordLabel" destination="ezn-P6-45J" id="f14-5C-gW4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ERe-QD-ewG" firstAttribute="top" secondItem="GRw-gU-57A" secondAttribute="bottom" constant="8" id="7p0-KB-XWQ"/>
+                            <constraint firstItem="orD-i6-CHe" firstAttribute="leading" secondItem="Z1g-as-yCz" secondAttribute="leadingMargin" constant="10" id="Qwd-fO-WGf"/>
+                            <constraint firstAttribute="trailing" secondItem="ERe-QD-ewG" secondAttribute="trailing" constant="8" id="cHA-yD-i2g"/>
+                            <constraint firstItem="ERe-QD-ewG" firstAttribute="leading" secondItem="Z1g-as-yCz" secondAttribute="leading" constant="8" id="deO-9g-VlQ"/>
+                            <constraint firstItem="zT6-vE-D9Y" firstAttribute="top" secondItem="orD-i6-CHe" secondAttribute="bottom" constant="20" id="r1O-7c-5FR"/>
+                            <constraint firstItem="orD-i6-CHe" firstAttribute="top" secondItem="ERe-QD-ewG" secondAttribute="bottom" constant="8" id="se4-6w-65Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="orD-i6-CHe" secondAttribute="trailing" constant="10" id="uiB-mM-sUN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CollectionViewBigBang" destination="ERe-QD-ewG" id="EOo-sc-PNb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKL-0a-r3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="-62.518740629685162"/>
+        </scene>
+    </scenes>
+</document>

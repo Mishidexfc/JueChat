@@ -1,0 +1,22 @@
+{
+    "code": 0,
+    "numberOfMessage":2,
+    "data": [
+             {
+             "avatar_url":"Avatar2",
+             "userID":"",
+             "nickname":"Saitama",
+             "msgType":"text",
+             "msgContent":"I will go to Starbucks on Marshall Street to buy a cup of coffee",
+             "ctime": "Mar.22.2017 10:00"
+             },
+             {
+             "avatar_url":"Avatar2",
+             "userID":"",
+             "nickname":"Saitama",
+             "msgType":"text",
+             "msgContent":"地球は，俺が守る！",
+             "ctime": "Mar.22.2017 10:00"
+             }
+             ]
+}

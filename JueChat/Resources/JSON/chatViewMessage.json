@@ -1,0 +1,42 @@
+{
+    "code": 0,
+    "message": "success!",
+    "data": [
+             {
+             "message_unread_num": 2,
+             "avatar_url": "https://pbs.twimg.com/media/C73ap-VXUAAlbCn.jpg",
+             "nickname": "JueWang",
+             "last_message": {
+             "ctime": "Mar.25.2017 15:02",
+             "timestamp": 1456154320227,
+             "message_content_type": "0",
+             "message": "Welcome to use JueChat !",
+             "device": "iphone"
+             }
+             },
+             {
+             "message_unread_num": 2,
+             "avatar_url": "https://pbs.twimg.com/media/C73ap93XQAIniuJ.jpg",
+             "nickname": "Saitama",
+             "last_message": {
+             "ctime": "Mar.23.2017 02:34",
+             "timestamp": 1456111050243,
+             "message_content_type": "0",
+             "message": "地球は，俺が守る！",
+             "device": "mac"
+             }
+             },
+             {
+             "message_unread_num": 3,
+             "avatar_url": "https://pbs.twimg.com/media/C73ap-MXUAENDvy.jpg",
+             "nickname": "薛之谦",
+             "last_message": {
+             "ctime": "Mar.22.2017 10:00",
+             "timestamp": 1454407342344,
+             "message_content_type": "0",
+             "message": "我的心愿是，世界和平",
+             "device": "iphone"
+             }
+             }
+             ]
+}

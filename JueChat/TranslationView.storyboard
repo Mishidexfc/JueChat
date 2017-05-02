@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transalation View Controller-->
+        <scene sceneID="hJw-9S-viC">
+            <objects>
+                <viewController storyboardIdentifier="TranslationView" id="6bu-zo-7ki" customClass="TransalationViewController" customModule="JueChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZY7-ak-ddx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eps-Gv-a5b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J0i-9e-NMq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-qN-ca0">
+                                <rect key="frame" x="36" y="60" width="303" height="567"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HEW-yf-2PE" userLabel="OriginTextView">
+                                        <rect key="frame" x="31.5" y="0.0" width="240" height="268.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNm-Pl-UHq">
+                                        <rect key="frame" x="113.5" y="268.5" width="76" height="30"/>
+                                        <state key="normal" title="Translation"/>
+                                        <connections>
+                                            <action selector="GoTranslation:" destination="6bu-zo-7ki" eventType="touchUpInside" id="bx5-6D-gbH"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GBb-Jm-lP6" userLabel="ResultTextView">
+                                        <rect key="frame" x="31.5" y="298.5" width="240" height="268.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3gr-qN-ca0" firstAttribute="leading" secondItem="J0i-9e-NMq" secondAttribute="leadingMargin" constant="20" id="Gia-7x-761"/>
+                            <constraint firstItem="3gr-qN-ca0" firstAttribute="top" secondItem="ZY7-ak-ddx" secondAttribute="bottom" constant="40" id="YME-ro-JZO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3gr-qN-ca0" secondAttribute="trailing" constant="20" id="ZV7-c5-n6J"/>
+                            <constraint firstItem="Eps-Gv-a5b" firstAttribute="top" secondItem="3gr-qN-ca0" secondAttribute="bottom" constant="40" id="iIP-wC-RCd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="OriginTextView" destination="HEW-yf-2PE" id="ClS-if-q2b"/>
+                        <outlet property="ResultTextView" destination="GBb-Jm-lP6" id="uPx-sd-DAJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDq-82-O2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266.39999999999998" y="-104.7976011994003"/>
+        </scene>
+    </scenes>
+</document>
