@@ -12,5 +12,7 @@
  * Most of UI sources are from Wechat.大部分的UI素材来自微信
  * JueChat's prototype is from TSWechat in Github.我的应用学习和参照于github上的TSWechat项目，以此基础上发展自己的风格和实现方法
  ****
+ Email: wangjue9489@gmail.com
+ ****
  Best，Jue
 
