@@ -1,5 +1,4 @@
 # JueChat
-# 珏信（仿写微信）
 ****
  #### Readme version1.1
  #### 简介版本 1.1
