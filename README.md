@@ -1,8 +1,6 @@
 # JueChat
  #### Readme version1.1
- #### 简介版本 1.1
  #### May.7th.2017
- #### 2017年5月7号
  ****
  #### I will update this application during this summer.
  #### 我将在这个夏天持续更新应用（目前学业很忙进度较慢）
