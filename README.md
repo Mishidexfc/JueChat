@@ -1,5 +1,4 @@
 # JueChat
-****
  #### Readme version1.1
  #### 简介版本 1.1
  #### May.7th.2017
