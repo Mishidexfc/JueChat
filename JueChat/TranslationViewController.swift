@@ -8,20 +8,24 @@
 
 import UIKit
 class TransalationViewController:UIViewController{
-    @IBOutlet weak var OriginTextView: UITextView!
-    @IBOutlet weak var ResultTextView: UITextView!
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var inputTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let dismissTap=UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyBoard))
+        self.view.addGestureRecognizer(dismissTap)
     }
-    @IBAction func GoTranslation(_ sender: UIButton) {
-        if self.OriginTextView.text != ""{
-            let temp=TransFeatures()
-            self.ResultTextView.text="Waiting for translation result."
-            temp.translate(yourStr: self.OriginTextView.text, completion: self.setResult(resultStr:))
-        }
+ 
+    @IBAction func TranslateTap(_ sender: UIButton) {
+        let tempTrs = TransFeatures()
+        tempTrs.translate(yourStr: self.inputTextView.text, completion: self.setResult(resultStr:))
     }
     func setResult(resultStr:String){
-        self.ResultTextView.text=resultStr
+    self.resultLabel.text=resultStr
     }
-    
+    func dismissKeyBoard(){
+        self.inputTextView.endEditing(true)
+    }
 }

@@ -187,24 +187,50 @@ open class LBXScanViewController: UIViewController, UIImagePickerControllerDeleg
         showMsg(title: "", message: "识别失败")
     }
     
+    private func getUrls(str:String) -> [String] {
+        var urls = [String]()
+        // 创建一个正则表达式对象
+        do {
+            let dataDetector = try NSDataDetector(types:
+                NSTextCheckingTypes(NSTextCheckingResult.CheckingType.link.rawValue))
+            // 匹配字符串，返回结果集
+            let res = dataDetector.matches(in: str,
+                                                   options: NSRegularExpression.MatchingOptions(rawValue: 0),
+                                                   range: NSMakeRange(0, str.characters.count))
+            // 取出结果
+            for checkingRes in res {
+                urls.append((str as NSString).substring(with: checkingRes.range))
+            }
+        }
+        catch {
+            print(error)
+        }
+        return urls
+    }
+    
     func showMsg(title:String?,message:String?)
     {
         if LBXScanWrapper.isSysIos8Later()
         {
-        
+            let urls = getUrls(str: message!)
             //if #available(iOS 8.0, *)
-            
-            let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.alert)
-            let alertAction = UIAlertAction(title:  "知道了", style: UIAlertActionStyle.default) { [weak self] (alertAction) in
-                
-                if let strongSelf = self
-                {
-                    strongSelf.startScan()
+            if urls.count>0{
+                if let url = NSURL(string:urls[0])  {
+                    UIApplication.shared.openURL(url as URL)
                 }
             }
-            
-            alertController.addAction(alertAction)
-            present(alertController, animated: true, completion: nil)
+            else{
+                let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.alert)
+                let alertAction = UIAlertAction(title:  "知道了", style: UIAlertActionStyle.default) { [weak self] (alertAction) in
+                    
+                    if let strongSelf = self
+                    {
+                        strongSelf.startScan()
+                    }
+                }
+                alertController.addAction(alertAction)
+                present(alertController, animated: true, completion: nil)
+            }
         }
     }
     deinit

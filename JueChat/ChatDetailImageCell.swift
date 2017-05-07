@@ -66,17 +66,18 @@ class ChatDetailImageCell:UITableViewCell{
                 make.height.equalTo(20)
                 make.right.lessThanOrEqualTo(-200)
                 make.left.equalTo(60)
-                make.top.equalTo(self.contentView.snp.top).offset(5)
+                make.top.equalTo(5)
             }
+            self.userNameLabel.contentMode = .left
             self.messageImage.snp.removeConstraints()
             self.messageImage.snp.makeConstraints{(make) -> Void in
                 make.left.equalTo(60)
-                make.top.equalTo(25)
+                make.top.equalTo(35)
                 
                 make.height.greaterThanOrEqualTo(45)
                 make.width.equalTo((self.messageImage.image?.size.width)!*resizePara)
                 make.height.equalTo((self.messageImage.image?.size.height)!*resizePara)
-                make.bottom.equalTo(self.contentView.snp.bottom).offset(-5)
+                make.bottom.equalTo(-5)
             }
         }
         else{//right side from myself
@@ -90,19 +91,21 @@ class ChatDetailImageCell:UITableViewCell{
             self.userNameLabel.snp.removeConstraints()
             self.userNameLabel.snp.makeConstraints{(make) -> Void in
                 make.height.equalTo(20)
-                make.left.lessThanOrEqualTo(200)
+                make.left.greaterThanOrEqualTo(200)
                 make.right.equalTo(-60)
-                make.top.equalTo(self.contentView.snp.top).offset(5)
+                make.top.equalTo(5)
             }
+            self.userNameLabel.contentMode = .right
             self.messageImage.snp.removeConstraints()
             self.messageImage.snp.makeConstraints{(make) -> Void in
                 make.right.equalTo(-60)
-                make.top.equalTo(25)
+                make.top.equalTo(35)
                 make.height.greaterThanOrEqualTo(45)
                 make.width.equalTo((self.messageImage.image?.size.width)!*resizePara)
                 make.height.equalTo((self.messageImage.image?.size.height)!*resizePara)
-                make.bottom.equalTo(self.contentView.snp.bottom).offset(-5)
+                make.bottom.equalTo(-5)
             }
+            
         }
         self.messageImage.clipsToBounds=true
         self.prepareStyle(whichSide: whichSide)

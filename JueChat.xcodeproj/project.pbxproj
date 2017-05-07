@@ -161,9 +161,7 @@
 		0B605A661E94E7BD00422ECC /* ToolsView */ = {
 			isa = PBXGroup;
 			children = (
-				0BBD0B021E9E711700B52912 /* TranslationView */,
 				0BBD0B011E9E70EB00B52912 /* ToolTableView */,
-				0BBD0B001E9E70D100B52912 /* OCR */,
 			);
 			name = ToolsView;
 			sourceTree = "<group>";
@@ -263,7 +261,6 @@
 			children = (
 				0BBD0B031E9E737700B52912 /* ChatTableView */,
 				0BBD0B041E9E739000B52912 /* UpperRightView */,
-				0BBD0B051E9E749500B52912 /* ChatDetailView */,
 			);
 			name = ChatView;
 			sourceTree = "<group>";
@@ -288,6 +285,8 @@
 		0BBD0B011E9E70EB00B52912 /* ToolTableView */ = {
 			isa = PBXGroup;
 			children = (
+				0BBD0B021E9E711700B52912 /* TranslationView */,
+				0BBD0B001E9E70D100B52912 /* OCR */,
 				0B605A671E94E7D400422ECC /* ToolsViewController.swift */,
 				0B7E184C1E97229600E6D55F /* ToolCell.xib */,
 				0B7E184E1E972E2600E6D55F /* ToolCellController.swift */,
@@ -307,6 +306,7 @@
 		0BBD0B031E9E737700B52912 /* ChatTableView */ = {
 			isa = PBXGroup;
 			children = (
+				0BBD0B051E9E749500B52912 /* ChatDetailView */,
 				0B77E5A11E761857002303A0 /* ChatViewController.swift */,
 				0B77E5DC1E840B8F002303A0 /* MessageCellInChatView.xib */,
 				0B77E5DF1E840D76002303A0 /* MessageCellInChatView.swift */,
