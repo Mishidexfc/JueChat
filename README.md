@@ -1,6 +1,7 @@
 # JueChat
 ****
- Readme version1.0 May.1st.2017
+ Readme version1.0 
+ May.7th.2017
  ****
   * Support the basic features for chat like sending messages, images and voice messages.
   * Most of UI sources are from Wechat.
