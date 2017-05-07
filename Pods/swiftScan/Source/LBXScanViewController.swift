@@ -217,6 +217,7 @@ open class LBXScanViewController: UIViewController, UIImagePickerControllerDeleg
             if urls.count>0{
                 if let url = NSURL(string:urls[0])  {
                     UIApplication.shared.openURL(url as URL)
+                    self.startScan()
                 }
             }
             else{
