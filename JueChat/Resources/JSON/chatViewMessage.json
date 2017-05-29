@@ -4,7 +4,7 @@
     "data": [
              {
              "message_unread_num": 2,
-             "avatar_url": "https://pbs.twimg.com/media/C73ap-VXUAAlbCn.jpg",
+             "avatar_url": "",
              "nickname": "JueWang",
              "last_message": {
              "ctime": "Mar.25.2017 15:02",
@@ -16,7 +16,7 @@
              },
              {
              "message_unread_num": 2,
-             "avatar_url": "https://pbs.twimg.com/media/C73ap93XQAIniuJ.jpg",
+             "avatar_url": "",
              "nickname": "Saitama",
              "last_message": {
              "ctime": "Mar.23.2017 02:34",
@@ -28,7 +28,7 @@
              },
              {
              "message_unread_num": 3,
-             "avatar_url": "https://pbs.twimg.com/media/C73ap-MXUAENDvy.jpg",
+             "avatar_url": "",
              "nickname": "薛之谦",
              "last_message": {
              "ctime": "Mar.22.2017 10:00",

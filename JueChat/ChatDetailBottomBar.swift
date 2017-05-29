@@ -45,7 +45,7 @@ UINavigationControllerDelegate {
     }
     
     /// Draw the layout for bottom bar
-    func drawLayout(){
+    private func drawLayout(){
         self.VoiceRecordButton.layer.cornerRadius=5
         self.VoiceRecordButton.layer.borderWidth=0.5
         self.VoiceRecordButton.layer.borderColor=UIColor.init(red: 0.43, green: 0.62, blue: 0.92, alpha: 1.0).cgColor
@@ -74,7 +74,7 @@ UINavigationControllerDelegate {
         
     }
     
-    func directoryURL() -> URL? {
+    private func directoryURL() -> URL? {
         // name an url for saving the record.
         let currentDateTime = NSDate()
         let formatter = DateFormatter()

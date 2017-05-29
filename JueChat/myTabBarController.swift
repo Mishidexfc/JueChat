@@ -36,10 +36,10 @@ class myTabBarController:UITabBarController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        checkStyle()
+        self.checkStyle()
     }
     
-    func checkStyle(){
+    private func checkStyle(){
             //tabItemColor = currentStyle.1![2]
     }
     

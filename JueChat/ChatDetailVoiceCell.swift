@@ -32,7 +32,7 @@ class ChatDetailVoiceCell:UITableViewCell{
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    func prepareStyle(whichSide:Bool){
+    private func prepareStyle(whichSide:Bool){
         if whichSide{
         self.VoiceBubbleImage.layer.borderColor=UIColor.lightGray.cgColor
             self.VoiceBubbleImage.backgroundColor=UIColor.white

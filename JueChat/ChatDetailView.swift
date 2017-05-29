@@ -45,7 +45,7 @@ class ChatDetailView:UIViewController,UITableViewDelegate,UITableViewDataSource,
     }
     
     /// Initialize the table view of Chat Detail
-    func loadTableView(){
+    private func loadTableView(){
         let userTemp = userInfo()
         self.userInformation = userTemp.getUserInfo()
         self.title=self.viewTitle
@@ -75,7 +75,7 @@ class ChatDetailView:UIViewController,UITableViewDelegate,UITableViewDataSource,
     }
     
     /// Initialize the data source from model.
-    func loadDataSource(){
+    private func loadDataSource(){
         let tempModel=ChatDetailMsgModel()
         let numOfMsg=tempModel.getNumOfMessage(userIndex: self.userIndex!)
         for i in 0..<numOfMsg{
@@ -85,7 +85,7 @@ class ChatDetailView:UIViewController,UITableViewDelegate,UITableViewDataSource,
     }
     
     /// Initialize the bottom bar
-    func loadBottomBar(){
+    private func loadBottomBar(){
         self.bottomBar = Bundle.main.loadNibNamed("ChatDetailBottomBar", owner: nil, options: nil)?.first as? ChatDetailBottomBar // load the view in xib file
         self.bottomBar?.InputTextField.delegate=self
         self.view.addSubview(self.bottomBar!)
@@ -111,7 +111,7 @@ class ChatDetailView:UIViewController,UITableViewDelegate,UITableViewDataSource,
     }
     
     /// The emoji keyboard for chat
-    func loadEmojiKeyBoard(){
+    private func loadEmojiKeyBoard(){
         self.bottomBar?.emojiKeyBoard=Bundle.main.loadNibNamed("ChatDetailEmojiPanel", owner: nil, options: nil)?.first as? ChatDetailEmojiPanel
         self.emojiPanel = self.bottomBar?.emojiKeyBoard
         self.emojiPanel?.parentInstance=self

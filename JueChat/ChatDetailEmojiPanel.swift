@@ -27,7 +27,7 @@ class ChatDetailEmojiPanel:UIView,UICollectionViewDelegate,UICollectionViewDataS
         self.drawLayout()
     }
     
-    func drawLayout(){
+    private func drawLayout(){
         self.EmojiCollectionView.register(UINib(nibName:"ChatDetailEmoji",bundle:nil), forCellWithReuseIdentifier: "EmojiCell")
         self.EmojiCollectionView.delegate=self
         self.EmojiCollectionView.dataSource=self
@@ -50,7 +50,7 @@ class ChatDetailEmojiPanel:UIView,UICollectionViewDelegate,UICollectionViewDataS
         self.EmojiCollectionView.reloadData()
     }
 }
-    extension ChatDetailEmojiPanel{
+extension ChatDetailEmojiPanel{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         if (self.imageSource.count % self.numOfEmojiInOnePage == 0 && self.imageSource.count != 0){
             return self.imageSource.count/self.numOfEmojiInOnePage
@@ -125,9 +125,9 @@ extension ChatDetailEmojiPanel{
                     attributedStrM = NSMutableAttributedString(attributedString: (view.bottomBar?.InputTextField.attributedText)!)
                 }
                 attributedStrM?.append(NSAttributedString(attachment: textAttachment))
-                 let textViewFont = UIFont.systemFont(ofSize: 14)
+                let textViewFont = UIFont.systemFont(ofSize: 14)
                 attributedStrM?.addAttribute(NSFontAttributeName, value:textViewFont,range: NSMakeRange(0,(attributedStrM?.length)!))
-
+                
                 view.bottomBar?.InputTextField.attributedText=attributedStrM
                 
                 //view.bottomBar?.InputTextField.text?.append(cell.emojiStr!)
