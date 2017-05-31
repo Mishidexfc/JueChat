@@ -14,6 +14,8 @@
 		0B605A631E94D7C400422ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B605A621E94D7C400422ECC /* Assets.xcassets */; };
 		0B605A651E94D80B00422ECC /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B605A641E94D80B00422ECC /* Media.xcassets */; };
 		0B605A681E94E7D400422ECC /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B605A671E94E7D400422ECC /* ToolsViewController.swift */; };
+		0B6AD8441EDE8F20001E2E88 /* ChatDetailMorePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B6AD8431EDE8F20001E2E88 /* ChatDetailMorePanel.xib */; };
+		0B6AD8461EDE91C0001E2E88 /* ChatDetailMorePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AD8451EDE91C0001E2E88 /* ChatDetailMorePanel.swift */; };
 		0B77E5A01E761857002303A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B77E59F1E761857002303A0 /* AppDelegate.swift */; };
 		0B77E5A21E761857002303A0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B77E5A11E761857002303A0 /* ChatViewController.swift */; };
 		0B77E5A51E761857002303A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B77E5A31E761857002303A0 /* Main.storyboard */; };
@@ -88,6 +90,8 @@
 		0B605A621E94D7C400422ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B605A641E94D80B00422ECC /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		0B605A671E94E7D400422ECC /* ToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
+		0B6AD8431EDE8F20001E2E88 /* ChatDetailMorePanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatDetailMorePanel.xib; sourceTree = "<group>"; };
+		0B6AD8451EDE91C0001E2E88 /* ChatDetailMorePanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailMorePanel.swift; sourceTree = "<group>"; };
 		0B77E59F1E761857002303A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B77E5A11E761857002303A0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0B77E5A41E761857002303A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +168,35 @@
 				0BBD0B011E9E70EB00B52912 /* ToolTableView */,
 			);
 			name = ToolsView;
+			sourceTree = "<group>";
+		};
+		0B6AD8411EDE8E0B001E2E88 /* ChatDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA612B1EA424A5001606F9 /* ChatDetailCell.xib */,
+				0BEA61291EA42330001606F9 /* ChatDetailCell.swift */,
+				0BEA612D1EA43511001606F9 /* ChatDetailImageCell.xib */,
+				0BA4BA131EA695290099F532 /* ChatDetailImageCell.swift */,
+				0BD5C6401EB315F9000E163F /* ChatDetailImageFullViewer.swift */,
+				0BD2928B1EA83A1800EAA3E1 /* ChatDetailVoiceCell.xib */,
+				0BA3E2C91EABAC17008143BB /* ChatDetailVoiceCell.swift */,
+			);
+			name = ChatDetailCell;
+			sourceTree = "<group>";
+		};
+		0B6AD8421EDE8E2D001E2E88 /* CharDetailBottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				0BBD0B061E9F171700B52912 /* ChatDetailBottomBar.xib */,
+				0BBD0B081E9F190D00B52912 /* ChatDetailBottomBar.swift */,
+				0BA3E2CF1EB2805D008143BB /* ChatDetailEmojiPanel.xib */,
+				0BA3E2CD1EB28043008143BB /* ChatDetailEmojiPanel.swift */,
+				0BD5C63C1EB2E2AB000E163F /* ChatDetailEmoji.xib */,
+				0BD5C63E1EB2E31C000E163F /* ChatDetailEmoji.swift */,
+				0B6AD8431EDE8F20001E2E88 /* ChatDetailMorePanel.xib */,
+				0B6AD8451EDE91C0001E2E88 /* ChatDetailMorePanel.swift */,
+			);
+			name = CharDetailBottomBar;
 			sourceTree = "<group>";
 		};
 		0B77E5931E761857002303A0 = {
@@ -325,21 +358,10 @@
 		0BBD0B051E9E749500B52912 /* ChatDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				0B6AD8421EDE8E2D001E2E88 /* CharDetailBottomBar */,
+				0B6AD8411EDE8E0B001E2E88 /* ChatDetailCell */,
 				0BEA61211EA11161001606F9 /* ChatDetailView.xib */,
 				0BEA61231EA1118A001606F9 /* ChatDetailView.swift */,
-				0BBD0B061E9F171700B52912 /* ChatDetailBottomBar.xib */,
-				0BBD0B081E9F190D00B52912 /* ChatDetailBottomBar.swift */,
-				0BEA612B1EA424A5001606F9 /* ChatDetailCell.xib */,
-				0BEA61291EA42330001606F9 /* ChatDetailCell.swift */,
-				0BEA612D1EA43511001606F9 /* ChatDetailImageCell.xib */,
-				0BA4BA131EA695290099F532 /* ChatDetailImageCell.swift */,
-				0BD5C6401EB315F9000E163F /* ChatDetailImageFullViewer.swift */,
-				0BD2928B1EA83A1800EAA3E1 /* ChatDetailVoiceCell.xib */,
-				0BA3E2C91EABAC17008143BB /* ChatDetailVoiceCell.swift */,
-				0BA3E2CF1EB2805D008143BB /* ChatDetailEmojiPanel.xib */,
-				0BA3E2CD1EB28043008143BB /* ChatDetailEmojiPanel.swift */,
-				0BD5C63C1EB2E2AB000E163F /* ChatDetailEmoji.xib */,
-				0BD5C63E1EB2E31C000E163F /* ChatDetailEmoji.swift */,
 			);
 			name = ChatDetailView;
 			sourceTree = "<group>";
@@ -443,6 +465,7 @@
 				0B7E184D1E97229600E6D55F /* ToolCell.xib in Resources */,
 				0B77E5BD1E768B9E002303A0 /* userInfo.json in Resources */,
 				0B605A651E94D80B00422ECC /* Media.xcassets in Resources */,
+				0B6AD8441EDE8F20001E2E88 /* ChatDetailMorePanel.xib in Resources */,
 				0B5AE4A91E9DD5F00065A0CA /* ToolOCR.storyboard in Resources */,
 				0B77E60B1E859FD8002303A0 /* chat2.json in Resources */,
 				0BD5C6491EB7627A000E163F /* chat1.json in Resources */,
@@ -530,6 +553,7 @@
 				0BD5C63F1EB2E31C000E163F /* ChatDetailEmoji.swift in Sources */,
 				0BD5C6471EB7172C000E163F /* TranslationViewController.swift in Sources */,
 				0B77E5A01E761857002303A0 /* AppDelegate.swift in Sources */,
+				0B6AD8461EDE91C0001E2E88 /* ChatDetailMorePanel.swift in Sources */,
 				0BEA61261EA112B8001606F9 /* ChatDetailMsgModel.swift in Sources */,
 				0B7E18551E97604D00E6D55F /* ToolOCRViewController.swift in Sources */,
 				0BBD0B091E9F190D00B52912 /* ChatDetailBottomBar.swift in Sources */,
